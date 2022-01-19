@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+#landing{
+    height: min(50vw, 100vh);
+    background-image: url("/assets/images/pexels-nadim-shaikh-7758253.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+            .nav-logo{
+                background-color: #edb518;
+                padding: 10px 5%;
+            }
+
+            .burger{
+                display: none;
+                width: 60px;
+                height: 60px;
+                margin-right: 5%;
+                background-image: url("/assets/images/burger.png");
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+
+            nav,
+            ul{
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+                align-items: center;
+            }
+
+            li{
+                list-style: none;
+                padding: 0 2em;
+            }
+
+            li a{
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 2vmin;
+                color: #edb518;
+            }
+
+            @media only screen and (max-width:850px) {
+
+                .nav-logo{
+                    border-bottom-right-radius: 4vh;
+                }
+
+                nav{
+                    justify-content: space-between;
+                }
+
+                .burger{
+                    display: block;
+                }
+
+                nav ul{
+                    display: block;
+                    position: absolute;
+                    top: 100px;
+                    left: 100vw;
+                }
+
+                nav ul li{
+                    padding: 15px 25vw;
+                    background-color: rgba(255, 255, 255, 0.103);
+                }
+
+                .active-nav-link{
+                    display: block;
+                    left: 20vw;
+                }
+
+                .disabled-nav-link{
+                    display: none;
+                    left: 100vw;
+                }
+
+                li:hover{
+                    background-color: rgba(255, 255, 255, 0.664);
+                }
+            }
+
+
+#second{
+    height: 100vh;
+    background-color: #edb518;
+}
+
+
