@@ -20,20 +20,10 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-image: url("/assets/images/pexels-king-david-4629337.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)) , url("/assets/images/710.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-
-#bg-video{
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    z-index: -1;
 }
 
 /*-------------------NAV BAR-----------------------------------*/
@@ -48,7 +38,6 @@ a{
             height: 80px;
             width: 200px;
             background-color: rgba(237, 180, 24, 0.827);
-            border-bottom-right-radius: 10px;
         }
 
         #logo{
@@ -68,7 +57,7 @@ a{
         }
 
         #nav-link{
-            margin: 10px 10%;
+            margin: 0px max(10px , 20vw);
             background-color: rgba(237, 180, 24, 0.267);
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
@@ -85,18 +74,18 @@ a{
         }
 
         #nav-link li{
-            font-size: clamp(20px, 2.5vw, 22px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: clamp(15px, 2vw, 20px);
             list-style: none;
             line-height: 45px;
             border-top: 1px solid #292220;
         }
 
         #nav-link li a{
-            color: #292220;
-        }
-
-        .link{
-            padding-left: 30vw;
+            color: rgb(240, 240, 240);
         }
 
         @media only screen and (min-width:1037px) {
@@ -109,9 +98,7 @@ a{
 
             #nav-link{
                 background-color: rgba(255, 255, 255, 0);
-                display: flex;
                 flex-direction: row;
-                align-items: center;
                 margin: 0;
             }
 
@@ -132,21 +119,45 @@ a{
 
 /*-------------------ARTICLE-----------------------------------*/
 
+        .expand-article{
+            padding: 10vw max(10px , 20vw);
+        }
+
+        .srink-article{
+            padding: 0px max(10px , 20vw);
+        }
+
         h3{
             font-size: clamp(45px, 5vw, 60px);
-            padding: 10vw max(10px , 20vw) 0px;
             font-weight: bolder;
-            color: #292220;
+            color: rgb(240, 240, 240);
             Filter: Chroma(Color = #292220);
         }
 
         p{
             font-size: clamp(20px, 2.5vw, 25px);
-            padding: 10px max(10px , 20vw);
             line-height: 25px;
+            padding: 30px 0px;
             font-weight: lighter;
-            color: #292220;
+            color: rgb(240, 240, 240);
             Filter: Chroma(Color = #292220);
+        }
+
+        #landing article button{
+            padding: 15px 20% 15px 15px;
+            margin-right: 2%;
+            font-size: clamp(10px, 2vw, 20px);
+            color: rgb(240, 240, 240);
+            border: none;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #landing article button:nth-child(odd){
+            background-color: #292220;
+        }
+
+        #landing article button:nth-child(even){
+            background-color: rgb(237, 180, 24);
         }
 
         #top{
@@ -157,13 +168,6 @@ a{
             background-repeat: no-repeat;
             background-position: center;
             animation: bounce 0.5s infinite alternate;
-        }
-
-        #top a{
-            display: block;
-            width: 100%;
-            height: 100%;
-            color: white;
         }
 
         @keyframes bounce {
