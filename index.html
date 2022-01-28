@@ -12,78 +12,135 @@
 <body>
     <section id="landing"> 
         <nav>
-            <header>
+            <header id="logo-menu">
                 <a href="index.html" id="nav-logo">
                     <img id="logo" src="./assets/images/logo.png" alt="african flavour" />
                 </a>
-                <div id="burger"></div>
+                <a onclick="menuToggle()" id="menu" class="button Notclicked">Menu</a>
             </header>
-            <ul id="nav-link" class="">
-                <li><a href="#" class="link"> Home </a></li>
-                <li><a href="#" class="link"> Recipes </a></li>
-                <li><a href="#" class="link"> Country </a></li>
-                <li><a href="#" class="link"> About </a></li>
-                <li><a href="#" class="link"> Contact </a></li>
-            </ul>
-
+            <header id="nav" class="hiddenMenu">
+                <ul id="nav-link" class="">
+                    <li><a href="#" class="link"> Home </a></li>
+                    <li><a href="#" class="link"> Recipes </a></li>
+                    <li><a href="#" class="link"> Country </a></li>
+                    <li><a href="#" class="link"> About </a></li>
+                    <li><a href="#" class="link"> Contact </a></li>
+                </ul>
+                <a class="button" >Subscribe</a>
+            </header>
         </nav>
 
-        <article id="first-article" class="expand-article">
-
+        <article id="article-1" class="article">
             <h3>Recipes From Around Africa</h3>
-            <p>
-                Balancing your nutritional diet and everyday lifestyle, by bringing you a diverse range of delectable cuisines across Africa.
+            <p class="paragraph">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias debitis doloremque impedit quas, voluptatum corporis animi quod nostrum repellendus explicabo quasi nisi ad id velit?
             </p>
-            <button>About Us</button><button>More</button>
-            <div id="top"></div>
+            <div class="buttons">
+                <a class="button">About Us</a>
+                <a class="button" href="#second">More</a>
+            </div>
+            
+        </article>
+        <div id="top"></div>
+    </section>
 
+    <section id="second">
+        <figure>
+            <img src="/assets/images/pexels-king-david-4629337.jpg" alt="">
+        </figure>
+        <article id="article-2" class="article">
+            <h3>Recipes From Around Africa</h3>
+            <p class="paragraph">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias debitis doloremque impedit quas, voluptatum corporis animi quod nostrum repellendus explicabo quasi nisi ad id velit?
+            </p>
+            <div class="buttons">
+                <a class="button" href="#third">Recipes</a>
+            </div>
         </article>
     </section>
-    <section id="second">
-        <main id="first-main">
+
+    <section id="third">
+        <h3 id="explore">Explore our Recipes</h3>
+
+        <main id="third-section-buttons">
+            <div class="buttons">
+                <a class="button">Breakfast</a>
+                <a class="button">Lunch</a>
+                <a class="button">Dinner</a>
+            </div>
+            <a class="button">View All</a>
         </main>
-        <main id="second-main">
-            <article class="card">
-                <div class="article-img"></div>
+
+        <main id="recipes">
+            <article class="recipe">
+                <h2 class="number">01</h2>
                 <div class="content">
-                    <h1>01</h1>
-                    <h2>Heading</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
+                    <h1 class="title">Lorem ipsum dolor sit amet.</h1>
+                    <i class="country">Country: Gambia</i>
+                    <a class="details" href="#">Details</a>
                 </div>
             </article>
-            <article class="card">
-                <div class="article-img"></div>
+            <article class="recipe">
+                <h2 class="number">01</h2>
                 <div class="content">
-                    <h1>02</h1>
-                    <h2>Heading</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
+                    <h1 class="title">Lorem ipsum dolor sit amet.</h1>
+                    <i class="country">Country: Gambia</i>
+                    <a class="details" href="#">Details</a>
                 </div>
             </article>
-            <article class="card">
-                <div class="article-img"></div>
+            <article class="recipe">
+                <h2 class="number">01</h2>
                 <div class="content">
-                    <h1>03</h1>
-                    <h2>Heading</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
+                    <h1 class="title">Lorem ipsum dolor sit amet.</h1>
+                    <i class="country">Country: Gambia</i>
+                    <a class="details" href="#">Details</a>
                 </div>
             </article>
-            <article class="card">
-                <div class="article-img"></div>
+            <article class="recipe">
+                <h2 class="number">01</h2>
                 <div class="content">
-                    <h1>04</h1>
-                    <h2>Heading</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
+                    <h1 class="title">Lorem ipsum dolor sit amet.</h1>
+                    <i class="country">Country: Gambia</i>
+                    <a class="details" href="#">Details</a>
+                </div>
+            </article>
+            <article class="recipe">
+                <h2 class="number">01</h2>
+                <div class="content">
+                    <h1 class="title">Lorem ipsum dolor sit amet.</h1>
+                    <i class="country">Country: Gambia</i>
+                    <a class="details" href="#">Details</a>
+                </div>
+            </article>
+            <article class="recipe">
+                <h2 class="number">01</h2>
+                <div class="content">
+                    <h1 class="title">Lorem ipsum dolor sit amet.</h1>
+                    <i class="country">Country: Gambia</i>
+                    <a class="details" href="#">Details</a>
+                </div>
+            </article>
+            <article class="recipe">
+                <h2 class="number">01</h2>
+                <div class="content">
+                    <h1 class="title">Lorem ipsum dolor sit amet.</h1>
+                    <i class="country">Country: Gambia</i>
+                    <a class="details" href="#">Details</a>
+                </div>
+            </article>
+            <article class="recipe">
+                <h2 class="number">01</h2>
+                <div class="content">
+                    <h1 class="title">Lorem ipsum dolor sit amet.</h1>
+                    <i class="country">Country: Gambia</i>
+                    <a class="details" href="#">Details</a>
                 </div>
             </article>
         </main>
     </section>
+
+    <footer>
+
+    </footer>
 </body>
 </html>
