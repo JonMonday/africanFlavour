@@ -1,29 +1,17 @@
 function menuToggle() {
     var menuButton = document.getElementById('menu');
     var nav = document.getElementById('nav');
-    var top = document.getElementById('top');
-    if(menuButton.classList.contains('Notclicked')){
-        menuButton.classList.remove('Notclicked');
-        menuButton.classList.add('clicked');
-
-        top.classList.add('hidden');
-        top.classList.remove('visible');
-
-        nav.classList.add('visibleMenu');
-        nav.classList.remove('hiddenMenu');
-
-        menuButton.innerText = 'Close';
-    }
-    else if (menuButton.classList.contains('clicked')){
+    var article1 = document.getElementById('article-1');
+    if(menuButton.classList.contains('clicked')){
         menuButton.classList.remove('clicked');
-        menuButton.classList.add('Notclicked');
-
-        top.classList.add('visible');
-        top.classList.remove('hidden');
-
-        nav.classList.add('hiddenMenu');
-        nav.classList.remove('visibleMenu');
-
         menuButton.innerText = 'Menu';
+        nav.classList.remove('visibleMenu');
+        article1.classList.remove('hide');
+    }
+    else {
+        menuButton.classList.add('clicked');
+        menuButton.innerText = 'Close';
+        nav.classList.add('visibleMenu');
+        article1.classList.add('hide');
     }
 }

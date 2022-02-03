@@ -7,21 +7,18 @@
 }
 
 html {  
-    scroll-behavior: smooth;  
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
-
-body{
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)) , url('/assets/images/710.jpg');
-    background-size: cover;
-    background-position: center;}
 
 a{
     text-decoration: none;
     color: #FAF6EA;
 }
 
-.link:hover{
-    color: #FEB937;
+a.shutdown{
+    color: #faf6ea2c;
+    cursor: default;
 }
 
 p{
@@ -41,16 +38,8 @@ h2{
     font-size: clamp(25px, 2.2vw, 45px);
 }
 
-a, p{
-    font-size: clamp(18px, 2vw, 22px);
-}
-
-i{
-    font-size: clamp(14px, 1.8vw, 20px);
-}
-
-.details{
-    color: #242427;
+a, i, p, h1{
+    font-size: clamp(18px, 2vw, 20px);
 }
 
 .buttons{
@@ -62,12 +51,37 @@ i{
 }
 
 .button{
+    width: 130px;
     background-color: #242427;
     padding: 0.7rem 2rem;
+    text-align: center;
+}
+
+.button.shutdown{
+    background-color: #2424278a;
 }
 
 .button:hover{
-    background-color:#95B645 ;
+    background-color: #FEB937;
+}
+
+.button.shutdown:hover{
+    background-color: #2424278a;
+}
+
+.link{
+    width: 140px;
+    margin: 0px 5px;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.link:hover{
+    background-color: #efe1c691;
+}
+
+.link.shutdown:hover{
+    background-color: #24242700;
 }
 
 #menu{
@@ -75,14 +89,40 @@ i{
     padding: 30px 0px;
 }
 
+#nav.visibleMenu{
+    right: 20px;
+}
+
+.bold{
+    font-weight: bolder;
+}
+
+.center{
+    text-align: center;
+}
+
+.special{
+    color: #FEB937;
+    font-weight: normal;
+}
+
+.logo{
+    display: block;
+    width: 190px;
+    height: 79.8px;
+    padding: 10px 20px 5px 10px;
+    background-color: #FEB937;
+}
+
+/*--------------------STYLE FOR THE LANDING SECTION-------------------------*/
 
 #landing{
-    height: 100vh;
     color: #FAF6EA;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)) , url('/assets/images/pexels-nadim-shaikh-7758253.jpg');
+    background:linear-gradient(rgba(17, 17, 17, 1), rgba(17, 17, 17, 0)), url('/assets/images/pexels-nadim-shaikh-7758253.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -97,34 +137,22 @@ i{
             display: flex;
             justify-content: space-between;
         }
-            #nav-logo{
-                padding: 10px 20px 5px 10px;
-                background-color: #FEB937;
-            }
 
         #nav{
+            z-index: 1;
+            display: flex;
+            position: absolute;
+            top: 140px;
+            right: -100vw;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin: 5px auto;
+            transition: all 500ms ease;
+            padding: 20px 40px;
+            background-color: #FEB937;
         }
 
-            .visibleMenu{
-                display: flex;
-            }
-
-            .hiddenMenu{
-                display: none;
-            }
-
-            #nav-link{
-                text-align: center;
-            }
-                li{
-                    padding: 5px 30px;
-                }
-
-    @media only screen and (min-width:1089px) {
+    @media only screen and (min-width:1235px) {
         nav{
             flex-direction: row;
             justify-content: space-between;
@@ -135,23 +163,27 @@ i{
         }
 
         #nav{
-            display: flex;
+            position: relative;
+            top: 0;
+            right: 0;
             flex-direction: row;
             margin: 0;
-        }
-        .hiddenMenu{
-            display: flex;
+            background-color: rgba(0, 0, 0, 0);
         }
 
-        #nav-link{
-            display: inline-flex;
+        .hiddenMenu{
+            display: flex;
         }
     }
 
     #article-1{
-        margin: 0px 10% ;
+        margin: 0px 20px 0px 20px;
+        transition: all 500ms ease;
     }
 
+    #article-1.hide{
+        opacity: 0.1;
+    }
 
         #top{
             width: 70px;
@@ -168,15 +200,22 @@ i{
             }
         }
 
-        @media only screen and (min-width:927px){
+        @media only screen and (min-width:1235px){
             #article-1{
                 margin: 0px 40% 0px 10%;
+                display: inline;
+            }
+
+            #article-1.hide{
+                opacity: 1;
             }
 
             #top{
                 visibility: visible;
             }
         }
+
+/*--------------------STYLE FOR THE ABOUT US SECTION-------------------------*/
 
 #about-us{
     color: #242427;
@@ -204,9 +243,10 @@ i{
         width: max(300px , 35vw);
     }
 
+/*--------------------STYLE FOR THE RECIPE LIST SECTION-------------------------*/
+
 #recipe-list{
     padding: 5%;
-    background-color: #EFE1C6;
 }
 
     #categories-buttons{
@@ -277,6 +317,7 @@ i{
                     font-style: italic;
                 }
 
+/*--------------------STYLE FOR THE COMMUNITY FEEDBACK SECTION-------------------------*/
 
 #community{
     padding: 5%;
@@ -310,6 +351,8 @@ i{
             border-radius: 10px;
         }
 
+/*--------------------STYLE FOR THE SIGNUP SECTION-------------------------*/
+
 #signup{
     display: flex;
     padding: 5%;
@@ -319,18 +362,17 @@ i{
     background-color: #EFE1C6;
 }
 
+/*--------------------STYLE FOR THE FOOTER SECTION-------------------------*/
+
 footer{
-    padding: 5% 5% 0px 5%;
     text-align: center;
 }
 
     #footer{
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         justify-content: center;
-        gap: 6%;
         flex-wrap: wrap;
-        background-color: #EFE1C6;
         padding: 25px 0px;
     }
 
@@ -360,22 +402,11 @@ footer{
                 padding: 20px 0px;
             }
 
-            #footer a{
+            #footer a,
+            footer span{
                 color: #242427;
             }
 
             #footer a:hover{
                 color: #FEB937;
             }
-
-            footer span {
-                color: #242427;
-            }
-
-.bold{
-    font-weight: bolder;
-}
-
-.center{
-    text-align: center;
-}
