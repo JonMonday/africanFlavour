@@ -6,6 +6,22 @@
     box-sizing: border-box;
 }
 
+h2{
+    font-size: 22px;
+    text-align: center;
+    padding: 0px 25px;
+}
+
+label,
+input,
+p{
+    font-size: 16px;
+}
+
+input{
+    padding: 10px;
+}
+
 span{
     text-decoration: underline;
     cursor: pointer;
@@ -16,6 +32,7 @@ body{
     background-color: aliceblue;
     width: 100vw;
     height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 section{
@@ -27,15 +44,14 @@ section{
     height: 90%;
     margin: auto auto;
     display: flex;
-    justify-content: right;
+    justify-content: center;
 }
 
 form{
     background-color: rgba(255, 255, 255, 0.5);
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     height: 100%;
-    width: min(400px, 100%);
+    width: min(500px, 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,15 +70,4 @@ form{
     margin: 0 auto;
     padding: 10px 20px 5px 10px;
     background-color: #FEB937;
-}
-
-.terms{
-    display: none;
-    padding: 10px;
-    border: 1px solid black;
-    margin-left: 10px;
-}
-
-.terms.visible{
-    display: block;
 }

@@ -346,6 +346,10 @@ a, i, p, h1{
             align-items: center;
         }
 
+        .user-info h1{
+            padding-left: 10px;
+        }
+
         .user-info img{
             width: 60px;
             border-radius: 10px;
