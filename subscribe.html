@@ -5,8 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subscribe</title>
+
+    <link rel="stylesheet" href="/assets/css/subscription.css">
+    <script src="/assets/js/subscription.js"></script>
 </head>
 <body>
-    sub
+    <section>
+        <form id="form">
+            <a href="index.html" class="logo">
+                <img src="./assets/images/logo.png" alt="african flavour" />
+            </a>
+            <h2>
+                Get better feed with conversational forms, surveys & more.
+            </h2>
+            <input id="email" name="Email" type="email" placeholder="Enter Emial">
+            <input id="password" name="Password" type="password" placeholder="Password">
+            <input id="confirmPassword" name="ConfirmPassword" type="password" placeholder="Confirm Password">
+            <div class="check">
+                <input id="terms" name="terms&services" type="checkbox">
+                <label for="terms&services">Agree to our <span onclick="services()" id="span1">Terms of Service</span> </label>
+            </div>
+            <p id="terms1" class="terms">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorem mollitia iste vero quia numquam vel temporibus nostrum dignissimos, recusandae nisi minima voluptate consequuntur placeat, repellendus ducimus, qui necessitatibus officiis.
+            </p>
+            <div class="check">
+                <input id="" name="privacypolicy" type="checkbox">
+                <label for="privacypolicy">Accept our use of your data for the service and everything else described in the <span onclick="policies()" id="spans">Privacy Policy and Data Processing Agreement</span> </label>
+            </div>
+            <p id="terms2" class="terms">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorem mollitia iste vero quia numquam vel temporibus nostrum dignissimos, recusandae nisi minima voluptate consequuntur placeat, repellendus ducimus, qui necessitatibus officiis.
+            </p>
+            <input onclick="submit()" type="submit" value="Subcribe to newletter">
+        </form>
+    </section>
+
 </body>
 </html>
