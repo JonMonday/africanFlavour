@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
 *,
 *::before,
 *::after{
@@ -9,16 +11,12 @@
 html {  
     scroll-behavior: smooth;
     overflow-x: hidden;
+    font-family: Poppins, sans-serif;
 }
 
 a{
     text-decoration: none;
     color: #FAF6EA;
-}
-
-a.shutdown{
-    color: #faf6ea2c;
-    cursor: default;
 }
 
 p{
@@ -370,6 +368,8 @@ a, i, p, h1{
 
 footer{
     text-align: center;
+    background-color: #242427;
+    color: #FAF6EA;
 }
 
     #footer{
@@ -406,11 +406,55 @@ footer{
                 padding: 20px 0px;
             }
 
-            #footer a,
-            footer span{
-                color: #242427;
+            footer .bold{
+                border-bottom: 1px solid #FEB937;
+                padding-bottom: 15px;
             }
 
             #footer a:hover{
                 color: #FEB937;
             }
+
+/*-------one recipe-----------*/
+
+#Onerecipe,
+#moreDetails{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#Onerecipe{
+    justify-content: center;
+    margin: 10px 30px;
+}
+
+    #Onerecipe img,
+    #Onerecipe article{
+        width: min(500px, 100%);
+    }
+
+    #Onerecipe img{
+        margin: 20px 0px;
+    }
+
+    #Onerecipe article{
+        margin: 15px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #ingredients{
+        width: max(100px, 40%);
+    }
+    
+    #instructions{
+        width: max(400px, 40%);
+    }
+
+#moreDetails{
+    justify-content: space-between;
+    padding: 20px 30px;
+    background-color: #EFE1C6;
+}

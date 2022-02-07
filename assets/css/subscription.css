@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
 *,
 *::before,
 *::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html{
+    font-family: Poppins, sans-serif;
 }
 
 h2{
